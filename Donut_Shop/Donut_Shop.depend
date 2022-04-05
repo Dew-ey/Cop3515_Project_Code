@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1649197060 source:f:\cprojects\projectteamny\donut_shop\main.c
+	<stdio.h>
+	<stdlib.h>
+	"kale_storage.h"
+
+1649194377 f:\cprojects\projectteamny\donut_shop\kale_storage.h
+
+1649197130 source:f:\cprojects\projectteamny\donut_shop\kale_storage.c
+	<stdio.h>
+	<time.h>
+	"kale_storage.h"
+

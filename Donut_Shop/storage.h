@@ -1,0 +1,6 @@
+#ifndef STORAGE_H_INCLUDED
+#define STORAGE_H_INCLUDED
+
+
+
+#endif // STORAGE_H_INCLUDED
