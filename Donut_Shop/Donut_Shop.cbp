@@ -31,9 +31,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="kale_storage.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="kale_storage.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="processing_stages.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="processing_stages.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

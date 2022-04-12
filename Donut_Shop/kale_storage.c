@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "kale_storage.h"
-
+#include "processing_stages.h"
 
 time_t t;   // Initialization, should only be called once.
 struct Supplier {
@@ -26,6 +26,9 @@ void current_amount(){
     }
 }
 
+float current_amount_int(){
+    return stored;
+}
 
 void supplier_info(){
     printf("\nSupplier 1: %s, tonnage price: %.2f$, Time until order fulfillment: %d Hours \n", sup1.name,sup1.pricePerTon,sup1.orderDuration);

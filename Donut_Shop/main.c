@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "kale_storage.h"
+#include "processing_stages.h"
 /******************************************
 * MAIN WILL INCLUE AREA WHERE RESUESTS ARE*
 * MADE POSSIBLY WILL INCLUDE A -h for a   *
@@ -19,7 +20,9 @@ int main()
         char str1[10] = "";
         scanf("%9s",str1);
         if(strcmp(str1,"-h")==0){ //if statement here gives list of command options on a -h request is reccomened to run on first launch
-                printf("Current commands are:\n-h (help)\n-STR (storage)\n-suPs Gives Info on all suppliers\n-uComp Update Supplier info\n-puch Initiates new order squence\n-e to exit\n\n\n");
+                printf("Current commands are:\n-h (help)\n-STR (storage)\n-suPs Gives Info on all suppliers\n-uComp Update Supplier info\n-puch Initiates new order squence\n-e to exit\n");
+                printf("-prCs: Current amount in processing\n-mFs: Move from storage\n-mFp: Move from processing\n-pTime: Check processing Times\n");
+
         }
         else if(strcmp(str1,"-STR")==0){ //STORAGE AMOUNT CHECK
                 current_amount();
@@ -39,6 +42,26 @@ int main()
         }
         else if(strcmp(str1,"-puch")==0){ //begins the purchase operation
             purchase_supply();
+        }
+        else if(strcmp(str1,"-prCs")==0){
+            amount_in_processing();
+        }
+        else if(strcmp(str1,"-mFs")==0){
+            printf("%f",current_amount_int());
+            printf("How much will be moved from storage to stages: ");
+            float j = 0;
+            scanf("%f",&j);
+            move_from_storage(j);
+        }
+        else if(strcmp(str1,"-mFp")==0){
+            printf("%f",current_amount_int());
+            printf("How much will be moved from stages to sales: ");
+            float j = 0;
+            scanf("%f",&j);
+            move_to_sales(j);
+        }
+        else if(strcmp(str1,"-pTime")==0){
+            processing_period();
         }
         else{
                 printf("Please use -h to look for a valid command\n ");
