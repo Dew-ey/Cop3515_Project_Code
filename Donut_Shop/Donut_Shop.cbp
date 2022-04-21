@@ -42,6 +42,11 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="processing_stages.h" />
+		<Unit filename="salesTracking.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="salesTracking.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

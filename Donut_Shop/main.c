@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "kale_storage.h"
 #include "processing_stages.h"
+#include "salesTracking.h"
 /******************************************
 * MAIN WILL INCLUE AREA WHERE RESUESTS ARE*
 * MADE POSSIBLY WILL INCLUDE A -h for a   *
@@ -18,10 +19,11 @@ int main()
    while(1){
         printf("\n\n\nWhat operation would you like to select (Type -h for a list of commands):");
         char str1[10] = "";
-        scanf("%9s",str1);
+        scanf("%9s%*c",str1);
         if(strcmp(str1,"-h")==0){ //if statement here gives list of command options on a -h request is reccomened to run on first launch
                 printf("Current commands are:\n-h (help)\n-STR (storage)\n-suPs Gives Info on all suppliers\n-uComp Update Supplier info\n-puch Initiates new order squence\n-e to exit\n");
                 printf("-prCs: Current amount in processing\n-mFs: Move from storage\n-mFp: Move from processing\n-pTime: Check processing Times\n");
+                printf("-slsUd: This is an update for doughnut sales (follow further instructions)\n-unitInfo: Run command to show sales info");
 
         }
         else if(strcmp(str1,"-STR")==0){ //STORAGE AMOUNT CHECK
@@ -62,6 +64,12 @@ int main()
         }
         else if(strcmp(str1,"-pTime")==0){
             processing_period();
+        }
+        else if(strcmp(str1,"-slsUd")==0){
+            updateSales();
+        }
+        else if(strcmp(str1,"-unitInfo")==0){
+            printInfo();
         }
         else{
                 printf("Please use -h to look for a valid command\n ");
